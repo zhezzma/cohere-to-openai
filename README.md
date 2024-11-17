@@ -4,7 +4,7 @@
 
 This is a simple Cloudflare Worker that transform Cohere API to OpenAI API, easily deployable to Cloudflare Workers.
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ckt1031/cohere2openai-cf-worker)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ckt1031/cohere-to-openai)
 
 ## Features
 
@@ -22,7 +22,7 @@ To utilize the Internet connector, simply append `-internet` to the model name. 
 
 ## How to Deploy
 
-1. Clone this repository: `git clone https://github.com/ckt1031/cohere2openai-cf-worker.git --depth=1`
+1. Clone this repository: `git clone https://github.com/ckt1031/cohere-to-openai.git --depth=1`
 2. Run `npm install` to install dependencies
 3. Run `npm run deploy` to deploy to Cloudflare Workers
 
