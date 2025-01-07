@@ -4,7 +4,7 @@ import { cors } from "hono/cors";
 import { getErrorMessageJSON } from "./utils";
 import { handleChatCompletions } from "./api";
 
-const app = new Hono();
+const app = new Hono<{ Bindings: Env }>()
 
 app.use(cors());
 
@@ -12,6 +12,10 @@ app.get("/", (c) => {
   return c.json({
     message: "Welcome to Cohere to OpenAI Cloudflare Worker edition.",
   });
+});
+
+app.get("/hello", (c) => {
+  return c.text("Hello World!");
 });
 
 app.get("/v1/models", async (c) => {
@@ -43,7 +47,6 @@ app.get("/v1/models", async (c) => {
 
 // Post /v1/chat/completions
 app.post("/v1/chat/completions", handleChatCompletions);
-
 
 app.notFound((c) => {
   return c.json(

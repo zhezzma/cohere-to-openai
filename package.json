@@ -1,15 +1,24 @@
 {
+  "name": "cohere",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "cohere-ai": "^7.13.0",
+    "cohere-ai": "^7.15.2",
     "hono": "^4.5.10",
     "openai": "^4.57.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "latest",
-    "wrangler": "latest"
+    "@cloudflare/vitest-pool-workers": "^0.5.2",
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.5.2",
+    "vitest": "2.1.8",
+    "wrangler": "^3.60.3"
   }
 }
