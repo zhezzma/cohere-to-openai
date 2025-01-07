@@ -143,6 +143,8 @@ export async function handleChatCompletions(
       }
     });
   } else {
+
+    console.log(apiRequestBody);
     const chat = await cohere.chat(apiRequestBody);
 
     const returnCompletionBody: OpenAI.ChatCompletion = {
