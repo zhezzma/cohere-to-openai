@@ -1,16 +1,17 @@
 {
-  "name": "cohere",
-  "version": "0.0.0",
-  "private": true,
+  "name": "cohere2openai",
+  "version": "1.0.0", 
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts",
+    "start": "wrangler dev ",
+    "dev": "wrangler dev ",
+    "deploy": "wrangler deploy",
     "test": "vitest",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "cohere-ai": "^7.15.2",
+    "dotenv": "^16.4.7",
     "hono": "^4.5.10",
     "openai": "^4.57.0"
   },
